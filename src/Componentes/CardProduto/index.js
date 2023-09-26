@@ -1,26 +1,9 @@
-import { View, Text, TouchableOpacity, Alert } from "react-native";
-import estilos from "./estilos";
+import { View, Text, TouchableOpacity } from "react-native";
+import { estilos } from "./estilos";
 import Icon from 'react-native-vector-icons/AntDesign';
 import { deletarProdutos } from "../../servicos/firestore";
 
 export function CardProduto({ produto, navigation }) {
-    async function deletar() {
-        Alert.alert(
-            'Deletar Produto',
-            'Tem certeza que quer deletar?',
-            [
-                {
-                    text: 'Não',
-                    style: 'cancel'
-                },
-                {
-                    text: 'Sim',
-                    style: 'default',
-                    onPress: () => { deletarProdutos(produto.id) },
-                },
-            ]
-        )
-    }
     return (
         <View style={estilos.container}>
             <View style={estilos.card} >
@@ -36,7 +19,7 @@ export function CardProduto({ produto, navigation }) {
                             color="#FFF"
                         />
                     </TouchableOpacity>
-                    <TouchableOpacity style={estilos.deleteButton} onPress={() => deletar()} >
+                    <TouchableOpacity style={estilos.deleteButton} onPress={() => deletarProdutos(produto.id)} >
                         <Icon
                             name={'delete'}
                             size={17}

@@ -1,5 +1,5 @@
 import { TouchableOpacity, Text } from "react-native";
-import estilos from "./estilos";
+import { estilos } from "./estilos";
 
 export function BotaoProduto( { onPress }) {
     return (

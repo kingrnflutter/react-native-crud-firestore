@@ -1,6 +1,6 @@
 import { View, TouchableOpacity, Text, Alert } from "react-native";
 import { TextInput, HelperText } from 'react-native-paper';
-import estilos from "./estilos";
+import { estilos } from "./estilos";
 import { useState } from "react";
 import { cadastrarProdutos, atualizarProdutos } from "../../servicos/firestore";
 

@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-export default StyleSheet.create({
+export const estilos = StyleSheet.create({
     botao: {
         position: 'absolute', //Ficar em qualquer lugar da tela
         bottom: 20,
